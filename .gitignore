@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Rust / Tauri
+target/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Tauri intermediate
+apps/client/src-tauri/target/
+
+# Tailwind
+apps/client/src/styles.css
+
+# Vite
+*.local
+
+# PostgreSQL data
+pgdata/

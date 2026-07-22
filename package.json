@@ -1,0 +1,20 @@
+{
+  "name": "cordfast",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:server\" \"pnpm dev:client\"",
+    "dev:client": "pnpm --filter @cordfast/client dev",
+    "dev:server": "pnpm --filter @cordfast/server dev",
+    "dev:db": "docker compose up -d",
+    "dev:tauri": "concurrently \"pnpm dev:server\" \"wait-on http://localhost:3001/health && pnpm --filter @cordfast/client dev:tauri\"",
+    "db:push": "pnpm --filter @cordfast/server db:push",
+    "build": "pnpm --filter @cordfast/client build & pnpm --filter @cordfast/server build",
+    "build:tauri": "pnpm --filter @cordfast/client build:tauri",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "wait-on": "^9.0.10"
+  }
+}
