@@ -6,7 +6,7 @@ import {
 type Handler<T = unknown> = (data: T) => void;
 
 const WS_URL =
-  import.meta.env.VITE_WS_URL || "ws://localhost:3001/ws";
+  import.meta.env.VITE_WS_URL || "wss://cordfast.dpdns.org/ws";
 
 export class WsClient {
   private ws: WebSocket | null = null;
