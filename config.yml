@@ -1,0 +1,7 @@
+tunnel: 1b748875-c080-49f6-9091-3acf4450aacc
+credentials-file: C:\Users\nicol\.cloudflared\1b748875-c080-49f6-9091-3acf4450aacc.json
+
+ingress:
+  - hostname: cordfast.dpdns.org
+    service: http://localhost:3001
+  - service: http_status:404
